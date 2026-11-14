@@ -1,31 +1,36 @@
-
 # Selection Sort
-def selection_sort(a):
-    for i in range(len(a)):
-        min = i
-        for j in range(i + 1, len(a)):
-            if a[j] < a[min]:
-                min = j
-        a[i], a[min] = a[min], a[i]
-    return a
+def selection_sort(values):
+    result = values.copy()
+    for i in range(len(result) - 1):
+        min_index = i
+        for j in range(i + 1, len(result)):
+            if result[j] < result[min_index]:
+                min_index = j
+        result[i], result[min_index] = result[min_index], result[i]
+    return result
+
 
 # Bubble Sort
-def bubble_sort(a):
-    for i in range(len(a)):
-        for j in range(len(a) - 1 - i):
-            if a[j] > a[j + 1]:
-                a[j], a[j + 1] = a[j + 1], a[j]
-    return a
+def bubble_sort(values):
+    result = values.copy()
+    for i in range(len(result)):
+        swapped = False
+        for j in range(len(result) - 1 - i):
+            if result[j] > result[j + 1]:
+                result[j], result[j + 1] = result[j + 1], result[j]
+                swapped = True
+        if not swapped:
+            break
+    return result
 
-# Main Program
-salary = [25000.5, 40000.0, 15000.0, 50000.0, 30000.0, 60000.0]
 
-print("Original Salaries:", salary)
+if __name__ == "__main__":
+    salary = [25000.5, 40000.0, 15000.0, 50000.0, 30000.0, 60000.0]
+    print("Original Salaries:", salary)
 
-s1 = selection_sort(salary.copy())
-print("Selection Sort:", s1)
+    s1 = selection_sort(salary)
+    print("Selection Sort:", s1)
 
-s2 = bubble_sort(salary.copy())
-print("Bubble Sort:", s2)
-
-print("Top 5 Highest Salaries:", s2[-5:][::-1])
+    s2 = bubble_sort(salary)
+    print("Bubble Sort:", s2)
+    print("Top 5 Highest Salaries:", s2[-5:][::-1])
