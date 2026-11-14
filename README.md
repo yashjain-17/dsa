@@ -1,36 +1,54 @@
-# DSA
+# DSA — Data Structures and Algorithms
 
-A Python-based workspace for learning and practising Data Structures and Algorithms.
+A Python practice repository for learning Data Structures and Algorithms through small, readable programs.
 
-## Learning roadmap
+## Current contents
 
-- Complexity analysis: time and space
-- Arrays, strings, and hashing
-- Searching and sorting
-- Linked lists
-- Stacks and queues
-- Recursion and backtracking
-- Trees, binary search trees, and heaps
-- Graphs
-- Greedy techniques and dynamic programming
+The repository currently contains standalone Python exercise files:
 
-## Practice format
+- `1.py` — list-based library borrowing statistics (average, high/low, zero count, mode)
+- `2.py` — stack-based undo and redo demonstration
+- `3.py` — linear search and binary search
+- `4.py`, `5.py`, and `dsl1.py` — additional practice programs; inspect each file for its exact exercise before running
 
-For each topic, add:
-1. A short explanation of the approach.
-2. A clear Python implementation.
-3. Time and space complexity.
-4. Example input and output.
-5. Edge cases tested.
+## Requirements
+
+- Python 3.10 or newer
+- No third-party packages are required by the currently documented exercises
+
+Check your Python installation:
+
+```bash
+python --version
+```
 
 ## Run a program
 
+From the repository root:
+
 ```bash
-python filename.py
+python 1.py
+python 2.py
+python 3.py
 ```
 
-Use the actual filename of the program you want to execute.
+Replace the filename with the exercise you want to practise. On systems where the Python 3 command is `python3`, use `python3 1.py`.
 
-## Progress
+## How to practise
 
-Update this README as topics and practice problems are completed. Prefer readable solutions and understand the approach before memorizing code.
+For every new problem, document:
+1. Problem statement and sample input/output
+2. Approach and algorithm
+3. Function-by-function explanation
+4. Time and auxiliary-space complexity
+5. Edge cases and manual tests
+
+For binary search, ensure the input is sorted before calling the function.
+
+## Learning roadmap
+
+Arrays and strings → searching and sorting → stacks and queues → linked lists → hashing → recursion → trees and BSTs → graphs → greedy algorithms → dynamic programming.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Keep solutions beginner-friendly, function-based where appropriate, and add a short explanation with each exercise.
