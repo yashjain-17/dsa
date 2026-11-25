@@ -2,6 +2,22 @@
 
 A Python practice repository for learning Data Structures and Algorithms through small, readable programs.
 
+## Complexity reference
+
+| Program / operation | Time complexity | Auxiliary space | Notes |
+|---|---:|---:|---|
+| `1.py` average / high-low / zero count | O(n) | O(1) | Each scans the list once (average uses a sum). |
+| `1.py` mode | O(n) expected | O(k) | Counter stores frequencies for k distinct values; ties keep the first value in input order. |
+| `2.py` undo / redo | O(1) per operation | O(h) total | h is the number of saved history states. |
+| `3.py` linear search | O(n) | O(1) | May inspect every element. |
+| `3.py` binary search | O(log n) | O(1) | Input must be sorted ascending. |
+| `4.py` selection sort | O(n²) | O(n) | Returns a copy; not stable. |
+| `4.py` bubble sort | O(n²) worst; O(n) best | O(n) | Returns a copy and stops early if already sorted. |
+| `5.py` hash-table insert/search/delete | O(1) average; O(n) worst | O(n) table storage | Separate chaining; collisions can form a long bucket. |
+| `dsl1.py` BST search/insert/delete | O(log n) average; O(n) worst | O(h) recursion | h is tree height; sorted insertion can make the tree skewed. |
+
+Complexities describe the algorithms in the current example implementations; they are not guarantees for every input.
+
 ## Current contents
 
 The repository currently contains standalone Python exercise files:
