@@ -26,7 +26,12 @@ def mode(values):
     if not values:
         print("Mode: No data")
         return None
-    result = max(set(values), key=lambda value: (values.count(value), -values.index(value)))
+
+    from collections import Counter
+
+    counts = Counter(values)
+    highest_frequency = max(counts.values())
+    result = next(value for value in values if counts[value] == highest_frequency)
     print("Mode:", result)
     return result
 
